@@ -1,12 +1,9 @@
 name: x86-x64-Stablize-FusionWRT
 
 on:
-  repository_dispatch:
-  workflow_dispatch:
-  schedule:
-    - cron: 0 17 * * *
-  # watch:
-  #   types: started
+  push:
+    paths:
+      - 'CHANGELOG.md'
 
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
